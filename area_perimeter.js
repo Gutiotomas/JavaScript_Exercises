@@ -10,4 +10,5 @@ rl.question("Introduce la base del cuadrado: ", function(base) {
     console.log("El área del cuadrado es: " + area);
     var perimeter = parseFloat(base) * 4;
     console.log("El perímetro del cuadrado es: " + perimeter);
+    rl.close();
 });

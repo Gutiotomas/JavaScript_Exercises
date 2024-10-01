@@ -12,12 +12,12 @@ else {
 // or alternatively 
 
 var num =7;
-switch (true) {
-    case (num <= 5): {
+switch (num) {
+    case num <= 5: {
         console.log("The number is less than or equal to 5");
         break;
     }
-    case (num > 5 && num <= 10): {
+    case num > 5 && num <= 10: {
         console.log("The number is greater than 5 and less than or equal to 10");
         break;
     }

@@ -1,4 +1,4 @@
-var number = 2;
+let number = 2;
 if (number <= 5) {
   console.log("The number is less than or equal to 5");
 }
@@ -11,7 +11,7 @@ else {
 
 // or alternatively 
 
-var num = 8;
+let num = 8;
 
 switch (true) {  // Use true to evaluate the conditions within each case
     case (num <= 5): {

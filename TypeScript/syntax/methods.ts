@@ -1,8 +1,8 @@
 //Todos estos métodos no modifican el array original (a menos que tú lo hagas), y devuelven un nuevo array o valor.
 
-const numeros = [1, 2, 3, 4];
+const numeros4 = [1, 2, 3, 4];
 
-const alCuadrado = numeros.map(num => num * num);
+const alCuadrado = numeros4.map(num => num * num);
 console.log(alCuadrado); // [1, 4, 9, 16]
 // Transforma cada valor, devolviendo un nuevo array.
 
@@ -28,9 +28,9 @@ console.log(encontrado); // "Tomás"
 //Devuelve el primer valor que cumpla con la condición.
 
 
-const edad = [14, 17, 20, 30];
+const edad3 = [14, 17, 20, 30];
 
-const indice = edad.findIndex(edad => edad >= 18);
+const indice = edad3.findIndex(edad => edad >= 18);
 console.log(indice); // 2
 //Devuelve el índice del primer valor que cumpla con la condición.
 

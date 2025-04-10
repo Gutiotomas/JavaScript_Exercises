@@ -30,3 +30,4 @@ const result = findIndices(arr, target);
 const result2 = twoSum(arr, target);
 console.log(`Indices of elements that sum to ${target}:`, result);
 console.log(`Indices of elements that sum to ${target}:`, result2);
+result;

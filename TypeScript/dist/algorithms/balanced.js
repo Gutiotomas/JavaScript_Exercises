@@ -2,10 +2,10 @@
 function validarParentesis(cadena) {
     const pila = [];
     for (const char of cadena) {
-        if (char === '(') {
+        if (char === "(") {
             pila.push(char);
         }
-        else if (char === ')') {
+        else if (char === ")") {
             if (pila.length === 0) {
                 return false;
             }

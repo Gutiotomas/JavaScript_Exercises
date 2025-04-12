@@ -28,6 +28,5 @@ const arr = [1, 2, 3, 4, 5];
 const target = 6;
 const result = findIndices(arr, target);
 const result2 = twoSum(arr, target);
-console.log(`Indices of elements that sum to ${target}:`, result);
-console.log(`Indices of elements that sum to ${target}:`, result2);
-result;
+console.log(`Indices of elements that sum to ${target} using findIndices:`, result);
+console.log(`Indices of elements that sum to ${target} using twoSum:`, result2);

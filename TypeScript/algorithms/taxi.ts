@@ -40,8 +40,15 @@ function chooseTaxi(
     }
   }
 
+  // Determine the appropriate decimal precision
+  const formatDistance = (distance: number): string => {
+    return distance % 1 === 0
+      ? distance.toFixed(1)
+      : distance.toFixed(2);
+  };
+
   // Round the break-even distance for cleaner output
-  const d = parseFloat(breakEvenDistance.toFixed(1));
+  const d = parseFloat(breakEvenDistance.toFixed(2));
 
   // Figure out which company is cheaper before and after the break-even distance
   const testBefore = d - 0.1;
@@ -60,9 +67,27 @@ function chooseTaxi(
   }
 
   // Compose the final output string
-  return `${companyBefore} when distance < ${d}. Either when distance = ${d}. ${companyAfter} when distance > ${d}`;
+  return `${companyBefore} when distance < ${formatDistance(d)}. Either when distance = ${formatDistance(d)}. ${companyAfter} when distance > ${formatDistance(d)}`;
 }
 
 // Example
-const resu = chooseTaxi("4.50", "2.00", "3.00", "1.75");
+const resu = chooseTaxi("2.5", "1.0", "5.0", "0.75");
 console.log(resu);
+
+// To determine the input for a specific distance, you can calculate the costs for both companies at that distance:
+const distance = 7.14;
+
+const calculateCost = (fixedFee: number, variableRate: number, distance: number): number => {
+  return fixedFee + variableRate * distance;
+};
+
+// Example inputs
+const TF1 = parseFloat("2.5"); // Fixed fee for Company 1
+const VQR1 = parseFloat("1.0"); // Variable rate for Company 1
+const TF2 = parseFloat("5.0"); // Fixed fee for Company 2
+const VQR2 = parseFloat("0.75"); // Variable rate for Company 2
+
+const cost1 = calculateCost(TF1, VQR1, distance);
+const cost2 = calculateCost(TF2, VQR2, distance);
+
+console.log(`At distance ${distance}, Company 1 costs: ${cost1.toFixed(2)}, Company 2 costs: ${cost2.toFixed(2)}`);

@@ -1,6 +1,4 @@
-type Coordinate = [number, number];
-
-function traceSnake(grid: string[]): Coordinate[] {
+const traceSnake = (grid: string[]): number[][] => {
   const height = grid.length;
   const width = grid[0].length;
 
@@ -26,7 +24,7 @@ function traceSnake(grid: string[]): Coordinate[] {
     if (grid[y][x] === "h") break;
   }
 
-  const path: Coordinate[] = [[x, y]];
+  const path: number[][] = [[x, y]];
 
   // Follow the arrows
   while (true) {
@@ -49,7 +47,7 @@ function traceSnake(grid: string[]): Coordinate[] {
   }
 
   return path;
-}
+};
 
 // Example input
 const grid = [" >>h   ", " ^   v ", " ^<<<< "];

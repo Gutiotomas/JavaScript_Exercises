@@ -14,7 +14,7 @@ const digits: Record<string, string[]> = {
   ":": ["   ", " . ", " . "],
 };
 
-function convertToSevenSegment(timeString: string): string {
+const convertToSevenSegment = (timeString: string): string => {
   // Replace leading zero with a space for aesthetic reasons
   let displayTime = timeString;
   if (timeString.startsWith("0")) {
@@ -38,7 +38,7 @@ function convertToSevenSegment(timeString: string): string {
   const output = [line1.join(""), line2.join(""), line3.join("")].join("\n");
 
   return output;
-}
+};
 
 // Example usage
 const timeToShow = "10:12";

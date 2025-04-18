@@ -3,10 +3,10 @@
 //If the Fibonacci wants to start from 1, then the first two numbers should be 1 and 1.
 
 function fibonacci(n: number): number[] {
-  const fibSequence: number[] = [0, 1];
+  const fibSequence = [0, 1];
 
-  let currentValue: number = 1;
-  let previousValue: number = 0;
+  let currentValue = 1;
+  let previousValue = 0;
 
   if (n === 1) {
     return [0];
@@ -33,8 +33,8 @@ function fibonacci(n: number): number[] {
 //If the Fibonacci wants to start from 1, then the first two numbers should be 1 and 1.
 
 function fibonacciNth(n: number): bigint {
-  let currentValue1: bigint = 1n;
-  let previousValue1: bigint = 0n;
+  let currentValue1 = 1n;
+  let previousValue1 = 0n;
 
   if (n === 1) {
     return 0n;

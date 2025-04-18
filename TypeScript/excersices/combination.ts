@@ -1,7 +1,7 @@
 const personas = [
     { nombre: "Ana", edad: 17 },
     { nombre: "Luis", edad: 20 },
-    { nombre: "Tomás", edad: 16 },
+    { nombre: "Tomas", edad: 16 },
     { nombre: "Laura", edad: 22 }
 ];
 

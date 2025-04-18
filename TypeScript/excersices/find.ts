@@ -1,4 +1,4 @@
-const lista = [2, 4, 8, 15, 7];
+const lista = [2, 4, 8, 15, 7, 3, 42];
 
 
 const mayor10 = lista.find((elemento) => elemento > 10);

@@ -21,7 +21,7 @@ interface Estudiante {
 }
 
 const estudiante1 : Estudiante = {
-    nombre: "Tomás",
+    nombre: "Tomas",
     edad: 23,
     promedio: 4.3
 }

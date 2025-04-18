@@ -14,7 +14,7 @@ class SMS implements Notificacion {
     }
 }
 
-class Usuario {
+class Usuario1 {
     public nombre: string;
     private notificacion: Notificacion;
 
@@ -31,13 +31,13 @@ class Usuario {
 
 
 const correo = new Correo();
-const usuario1 = new Usuario("Tomás", correo);
+const Usuario11 = new Usuario1("Tomás", correo);
 
-usuario1.notificar("¡Tienes una nueva tarea!");
+Usuario11.notificar("¡Tienes una nueva tarea!");
 // ✉️ Enviando correo a Tomás: ¡Tienes una nueva tarea!
 
 const sms = new SMS();
-const usuario2 = new Usuario("Laura", sms);
+const Usuario12 = new Usuario1("Laura", sms);
 
-usuario2.notificar("Tu paquete ha sido enviado.");
+Usuario12.notificar("Tu paquete ha sido enviado.");
 // 📱 Enviando SMS a Laura: Tu paquete ha sido enviado.

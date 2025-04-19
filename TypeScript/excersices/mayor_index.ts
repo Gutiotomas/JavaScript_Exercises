@@ -1,5 +1,5 @@
 function indiceMaximo(arr: number[]): number {
-    let maxNumber = 0;
+    let maxNumber = arr[0];
     let maxIndex = 0;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > maxNumber) {

@@ -10,10 +10,8 @@ function espiralInvertida(matriz: number[][]): number[] {
     [-1, 0], // ↑ arriba
   ];
 
-  let x = Math.floor(n / 2);
-  let y = Math.floor(m / 2);
-  if (x % 2 === 0) x--;
-  if (y % 2 === 0) y--;
+  let x = Math.floor((n - 1) / 2);
+  let y = Math.floor((m - 1) / 2);
   res.push(matriz[x][y]);
 
   let pasos = 1;
@@ -59,3 +57,9 @@ const m5 = [
   [21, 22, 23, 24, 25],
 ];
 console.log(espiralInvertida(m5)); // Output: [13, 14, 19, 18, 17, 12, 7, 8, 9, 10, 15, 20, 25, 24, 23, 22, 21, 16, 11, 6, 1, 2, 3, 4, 5]
+
+const m6 = [
+    [1, 2],
+    [3, 4],
+];
+console.log(espiralInvertida(m6)); // Output: [1, 2, 4, 3]

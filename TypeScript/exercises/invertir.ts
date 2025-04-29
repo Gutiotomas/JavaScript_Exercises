@@ -1,7 +1,7 @@
 function invertirArray(arr: number[]): number[] {
     let invertido = [];
     for (let i = arr.length - 1; i >= 0; i--) {
-        invertido.push(arr[i]);
+        invertido[invertido.length] = arr[i];
     }
     return invertido;
 }

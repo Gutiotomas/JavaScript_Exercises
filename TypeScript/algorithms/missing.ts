@@ -1,14 +1,11 @@
 import * as readline from "readline";
 
 const missingNumber = (max: number, arr: number[]): number => {
-  let arrSort = arr.sort((a, b) => a - b);
-  let missing = 0;
-  for (let i = 0; i < arrSort.length + 1; i++)
-    if (i + 1 != arrSort[i]) {
-      missing = i + 1;
-      break;
-    }
-  return missing;
+  let totalSum = (max * (max + 1)) / 2;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++)
+      sum += arr[i];
+  return totalSum - sum;
 };
 
 const rl = readline.createInterface({

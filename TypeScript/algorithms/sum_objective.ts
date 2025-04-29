@@ -15,6 +15,17 @@ function findIndices(arr: number[], target: number): number[] {
   return [index1, index2];
 }
 
+function twoSumWithoutMap(nums: number[], target: number): number[] {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
+}
+
 function twoSum(nums: number[], target: number): number[] {
   const mapa = new Map<number, number>();
 
@@ -33,8 +44,4 @@ const arr = [1, 2, 3, 4, 5];
 const target = 6;
 const result = findIndices(arr, target);
 const result2 = twoSum(arr, target);
-console.log(
-  `Indices of elements that sum to ${target} using findIndices:`,
-  result
-);
-console.log(`Indices of elements that sum to ${target} using twoSum:`, result2);
+const result3 = twoSumWithoutMap(arr, target);
